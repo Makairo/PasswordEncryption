@@ -33,6 +33,7 @@ namespace PasswordEncryption
                     Console.WriteLine($"Account Number {count}:");
                     Console.WriteLine($"Username: {item.UserName}");
                     Console.WriteLine($"Password Hash: {item.PassHash}\n");
+                    count++;
                 }
             }
         }

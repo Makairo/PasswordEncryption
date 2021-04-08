@@ -16,7 +16,7 @@ namespace PasswordEncryption
             string output = "";
             foreach(char x in input)
             {
-                output += x + 797;
+                output += (char)((int)x + 9);
             }
             return output;
         }
@@ -83,8 +83,11 @@ namespace PasswordEncryption
                     userInd = i;
                     break;
                 }
-                General.PrintOut("That account does not exist.");
-                return;
+                if(i == UserAccounts.Count - 1)
+                {
+                    General.PrintOut("That account does not exist.");
+                    return;
+                }
             }
 
             Console.WriteLine("Enter your password: ");
