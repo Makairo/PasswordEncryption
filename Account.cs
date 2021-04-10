@@ -13,10 +13,11 @@ namespace PasswordEncryption
 
         public static string Encrypt(string input)
         {
+            Random Enc = new Random(7777);
             string output = "";
             foreach(char x in input)
             {
-                output += (char)((int)x + 9);
+                output += (char)((int)x + Enc.Next(-77,77));
             }
             return output;
         }
